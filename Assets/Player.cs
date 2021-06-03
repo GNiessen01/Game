@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D rb;
     public Animator animator;
+    public LayerMask groundLayer;
 
     [Header("Physics")]
     public float maxSpeed = 7f;
