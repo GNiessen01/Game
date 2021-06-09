@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
     void modifyPhysics()
     {
         bool changingDirections = (direction.x > 0 && rb.velocity.x < 0) || (direction.x < 0 && rb.velocity.x > 0);
-   
+   // Mario Jump//
         if (onGround)
         {
             if (Mathf.Abs(direction.x) < 0.4f || changingDirections)
@@ -97,11 +97,13 @@ public class Player : MonoBehaviour
             }
         }
     }
+    //Animation Idle//
     void Flip()
     {
         facingRight = !facingRight;
         transform.rotation = Quaternion.Euler(0, facingRight ? 0 : 180, 0);
     }
+    //Gizmos//
     private void OnDrawGizmos ()
     {
         Gizmos.color = Color.yellow;
